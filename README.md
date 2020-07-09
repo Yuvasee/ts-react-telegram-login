@@ -15,6 +15,11 @@ Influenced by [this repo](https://github.com/hprobotic/react-telegram-login/).
 `npm i @v9v/ts-react-telegram-login`
 or `yarn add @v9v/ts-react-telegram-login`
 
+#### Important! (thanks [hprobotic](https://github.com/hprobotic/react-telegram-login))
+
+-   Login widget will not work on `localhost` or `local-ip-address`. Use should create and register your bot domain with BotFather to get that work. You can create your custom domain. For example: `yourdomain.local` by add new record point to your local ip by edit `hosts` file.
+-   It's only run on port 80. When you use `create-react-app`. You must run `sudo yarn PORT=80 start`, or on Windows CMD (not powershell), `set PORT=80 && yarn start`
+
 ## Usage example
 
 ```typescript
