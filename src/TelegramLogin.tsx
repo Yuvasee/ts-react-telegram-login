@@ -2,13 +2,21 @@ import React, { useRef, useEffect } from 'react';
 
 interface TelegramLoginButtonProps {
     botName: string;
-    dataOnAuth?: (user: any) => void;
+    dataOnAuth?: (user: TelegramUser) => void;
     dataAuthUrl?: string;
     buttonSize?: 'large' | 'medium' | 'small';
     cornerRadius?: number;
     requestAccess?: boolean;
     usePic?: boolean;
     lang?: string;
+}
+
+interface TelegramUser {
+    auth_date: number;
+    id: number;
+    first_name: string;
+    last_name: string;
+    hash: string;
 }
 
 function TelegramLogin(props: TelegramLoginButtonProps) {
@@ -57,7 +65,7 @@ function TelegramLogin(props: TelegramLoginButtonProps) {
 
         containerRef.current!.appendChild(script);
 
-        () => {
+        return () => {
             if (containerRef.current) {
                 containerRef.current.innerHTML = '';
             }
