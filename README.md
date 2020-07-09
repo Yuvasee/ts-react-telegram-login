@@ -10,13 +10,18 @@ Influenced by [this repo](https://github.com/hprobotic/react-telegram-login/).
 -   Hook component
 -   Cleans up on unmount
 
+## Installation
+
+`npm i @v9v/ts-react-telegram-login`
+or `yarn add @v9v/ts-react-telegram-login`
+
 ## Usage example
 
 ```typescript
 import React from 'react';
-import TelegramLoginButton from '@v9v/ts-react-telegram-login';
+import TelegramLoginButton, { TelegramUser } from '@v9v/ts-react-telegram-login';
 
-const handleTelegramResponse = (user: any) => {
+const handleTelegramResponse = (user: TelegramUser) => {
     console.log(user);
 };
 

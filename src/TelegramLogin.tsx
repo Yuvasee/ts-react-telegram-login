@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 
-interface TelegramLoginButtonProps {
+export interface TelegramLoginButtonProps {
     botName: string;
     dataOnAuth?: (user: TelegramUser) => void;
     dataAuthUrl?: string;
@@ -11,7 +11,7 @@ interface TelegramLoginButtonProps {
     lang?: string;
 }
 
-interface TelegramUser {
+export interface TelegramUser {
     auth_date: number;
     id: number;
     first_name: string;
