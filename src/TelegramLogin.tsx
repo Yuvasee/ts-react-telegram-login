@@ -17,6 +17,7 @@ export interface TelegramUser {
     first_name: string;
     last_name: string;
     hash: string;
+    username: string;
 }
 
 function TelegramLogin(props: TelegramLoginButtonProps) {
